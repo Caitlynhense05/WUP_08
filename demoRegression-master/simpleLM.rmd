@@ -64,4 +64,20 @@ LENGTH RSE is 61.83
 HEADLEN RSE is 67.81  
 HEDWTH RSE is 76.41 
  
+```{r}
+CHEST <- lm(WEIGHT~CHEST,data=bears)
+plot(WEIGHT~CHEST,data=bears)
+abline(CHEST)
+summary.lm(CHEST)
+```
+
+Best to Worst ordered by RSE  
+CHEST RSE is 33.08  
+Neck RSE is 43.91  
+LENGTH RSE is 61.83   
+HEADLEN RSE is 67.81  
+HEDWTH RSE is 76.41 
+ 
+
+
 
