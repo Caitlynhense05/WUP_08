@@ -28,5 +28,15 @@ summary.lm(simp)
 ```
 
 
+
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+```{r}
+mHEADLEN <- lm(WEIGHT~HEADLEN,data=bears)
+plot(WEIGHT~HEADLEN,data=bears)
+abline(mHEADLEN)
+summary.lm(mHEADLEN)
+```
+
+From our observations, the residual standard error is 67.81 and our adjusted R-squared is 0.69. Ordering the models from best to worst, the best one is the weight explained by neck followed by the weight explained by HEADLEN.
+
 
